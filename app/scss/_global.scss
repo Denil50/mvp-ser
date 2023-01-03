@@ -1,0 +1,13 @@
+body{
+    @extend %roboto-300;
+    font-size: 17px;
+    line-height: 20px;
+    color: rgba(33, 38, 41, 0.6);
+    background-color: #E9E9E9;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 15px;
+}
