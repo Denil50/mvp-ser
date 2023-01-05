@@ -222,4 +222,94 @@
     @extend %roboto-700;
     color: $default;
 }
+
+.product-item{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: $br-def;
+    max-width: 370px;
+    background-color: #E9E9E9;
+    transition: all .3s;
+    &:hover{
+        z-index: 3;
+        background-color: #212629;
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 40px 40px 50px rgba(0, 0, 0, 0.5);
+        color: rgba(255, 255, 255, 0.6);
+        .product-item__title{
+            color: #FFFFFF;
+        }
+        .product-item__link{
+            background: #212629;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), -1px -1px 6px rgba(255, 255, 255, 0.05), -5px -5px 20px rgba(255, 255, 255, 0.1), 5px 5px 20px rgba(0, 0, 0, 0.8);
+        }
+    }
+    &__img{
+        margin-bottom: 20px;
+        border-radius: 40px 40px 0 0;
+        object-fit: cover;
+    }
+    &__inner{
+        margin: 20px;
+    }
+    &__title{
+        font-size: 20px;
+        line-height: 24px;
+        @extend %roboto-700;
+        color: $default;
+        margin-bottom: 11px;
+    }
+    &__price{
+        font-size: 22px;
+        @extend %roboto-700;
+        margin-bottom: 18px;
+    }
+    &__link{
+        display: block;
+        margin-top: 18px;
+        text-align: center;
+        font-size: 18px;
+        @extend %roboto-700;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+        background: #E9E9E9;        
+        border-radius: 99px;
+        padding: 10px 0;
+    }
+}
+.product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.footer-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-top: 246px;
+}
+.footer-item{
+    max-width: 370px;
+    &__link{
+        color: $default;
+        display: flex;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        transition: all .3s;
+        border-top: 1px solid rgba(22, 22, 22, 0.08);
+        & svg{
+            margin-right: 20px;
+        }
+        &:hover{
+            color: $accent;
+            path{
+                fill: $accent;
+            }
+        }
+    }
+    &__link-ser{
+        color: $default;
+        border-top: 1px solid rgba(22, 22, 22, 0.08);
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+}
 @import 'media';
