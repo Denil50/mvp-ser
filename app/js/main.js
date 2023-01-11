@@ -17,9 +17,24 @@ $(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       centerMode: true,
-      centerPadding: '155px',
+      centerPadding: '210px',
       arrows: false,
+      responsive: [
+        {
+          breakpoint: 1800,
+          settings: {
+            centerPadding: '155px',
+          }
+        },
+        {
+          breakpoint: 1600,
+          settings: {
+            centerPadding: '110px',
+          }
+        },
+      ]
     });
     $('.slick-prev').text(">");
     $('.slick-next').text("<");
+    
 });

@@ -58,7 +58,7 @@
         background-position: center center;
     }
     &__btn-profileMenu{
-        z-index: 100;
+        z-index: -1;
         position: absolute;
         top: 50px;
         right: 30px;
@@ -66,8 +66,10 @@
         transition: all .3s;
         &.header-inner__btn-profileMenu--active{
             opacity: 1;
+            z-index: 10;
             display: block;
             width: 400px;
+            margin: 0 auto;
             background-color: #E9E9E9;
             border-radius: $br-def;
             box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 60px 60px 80px rgba(0, 0, 0, 0.35);
@@ -90,23 +92,65 @@
             color: $default;
         }
         max-width: 360px;
-        margin: 0 auto;
+        margin: 0 20px;
         border-top: 1px solid #fff;
         position: relative;
-        &::before{
-            content: '';
-            position: absolute;
-            width: 19px;
-            height: 18px;
-            background-image: url('../images/icon/order.svg');
-            left: 0px;
-            top: 20px;
-        }
     }
     &__item-text{
         display: block;
         padding-left: 41px;
         padding-bottom: 20px;
         padding-top: 20px;
+        &--bask::before {
+                content: '';
+                position: absolute;
+                width: 19px;
+                height: 18px;
+                background-image: url('../images/icon/order.svg');
+                left: 5px;
+                top: 20px;
+        }
+        &--wa::before {
+            content: '';
+            position: absolute;
+            width: 19px;
+            height: 18px;
+            background-image: url('../images/icon/watsapp-min.svg');
+            left: 5px;
+            top: 20px;
+        }
+        &--vk::before {
+            content: '';
+            position: absolute;
+            width: 19px;
+            height: 13px;
+            background-image: url('../images/icon/vk-min.svg');
+            left: 5px;
+            top: 24px;
+        }
+    }
+}
+
+@media (max-width: 690px){
+    .header-inner__btn-item{
+        display: none;
+    }
+}
+
+@media (max-width: 500px){
+    .header-inner__btn-profileMenu.header-inner__btn-profileMenu--active{
+        width: 350px;
+
+    }
+}
+
+@media (max-width: 430px){
+    .header-inner{
+        &__btn-profileMenu{
+            right: 0px;
+            &.header-inner__btn-profileMenu--active{
+                width: 290px;
+            }
+        }
     }
 }

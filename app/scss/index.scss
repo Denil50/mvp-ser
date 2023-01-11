@@ -26,6 +26,9 @@
             width: 645px;
             height: 323px;
             background-image: url('../images/dekor/car.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
             right: 40px;
             bottom: 0;
         }
@@ -85,6 +88,7 @@
 .category-top{ 
     margin-bottom: 72px;
     &__item{
+        display: inline-flex;
         font-size: 16px;
         color: $default;
         padding: 9px 19px;
@@ -169,3 +173,5 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 }
+
+@import 'media';

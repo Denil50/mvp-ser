@@ -30,3 +30,18 @@
         margin-bottom: 20px;
     }
 }
+
+@media (max-width: 800px){
+    .footer-items{
+        margin-top: 160px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+@media (max-width: 475px){
+    .footer-items{
+        margin-top: 160px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+}
